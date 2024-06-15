@@ -1,0 +1,14 @@
+#!/bin/bash
+
+docker run --rm -ti -v ~/.aws:/root/.aws amazon/aws-cli \
+ec2 run-instances \
+--image-id ami-xxxxxxxx \
+--count 1 \
+--instance-type t3.micro \
+--key-name MyKeyPair \
+--security-group-ids sg-903004f8 \
+--subnet-id subnet-6e7f829e \
+--region us-east-1
+
+
+
